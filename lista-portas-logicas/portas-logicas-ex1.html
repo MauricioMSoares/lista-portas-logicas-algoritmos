@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+
+    <h1>Semáforo</h1>
+    <label for="select_rua_a">Rua A: </label>
+    <select id="select_rua_a">
+        <option value="0">Parado</option>
+        <option value="1">Andando</option>
+    </select><br>
+    <label for="select_rua_b">Rua B: </label>
+    <select id="select_rua_b">
+        <option value="0">Parado</option>
+        <option value="1">Andando</option>
+    </select><br>
+    <button onclick="simular()">Simular</button>
+    
+</body>
+</html>
+
+<script>
+
+    function simular() {
+        var ruaA = Number(select_rua_a.value);
+        var ruaB = Number(select_rua_b.value);
+
+        if (ruaA == 0 && ruaB == 0) {
+            alert("Risco de engarrafamento");
+        }
+        else if (ruaA == 1 && ruaB == 1) {
+            alert("Risco de colisão");
+        }
+        else {
+            alert("Fluxo perfeito");
+        }
+    }
+    //Esta é uma porta XOR ou OU EXCLUSIVO
+
+</script>

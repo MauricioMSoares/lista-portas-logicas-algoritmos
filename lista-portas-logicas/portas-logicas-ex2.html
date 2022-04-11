@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+
+    <h1>Organiza Festa</h1>
+    <label for="select_convidados_a">Convidados A: </label>
+    <select id="select_convidados_a">
+        <option value="0">Carnes e derivados de animais</option>
+        <option value="1">Apenas opções veganas</option>
+    </select><br>
+    <label for="select_convidados_b">Convidados B: </label>
+    <select id="select_convidados_b">
+        <option value="0">Carnes e derivados de animais</option>
+        <option value="1">Apenas opções veganas</option>
+    </select><br>
+    <button onclick="verificar()">Verificar</button>
+    
+</body>
+</html>
+
+<script>
+
+    function verificar() {
+        var convidadosA = Number(select_convidados_a.value);
+        var convidadosB = Number(select_convidados_b.value);
+
+        if (convidadosA == 0 && convidadosB == 0) {
+            alert("Tá tudo liberado! Taxa de sucesso de 100%");
+        }
+        else if (convidadosA == 1 && convidadosB == 1) {
+            alert("Ótimo! Taxa de sucesso de 100%");
+        }
+        else {
+            alert("Probabilidade de fracasso de 100%");
+        }
+    }
+    //Esta é uma porta XOR ou OU EXCLUSIVO com saída negada
+
+</script>

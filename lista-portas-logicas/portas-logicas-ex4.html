@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+
+    <h1>Partiu Ibira</h1>
+    <label for="select_frequentador_a">Frequentador A: </label>
+    <select id="select_frequentador_a">
+        <option value="0">Não irei neste fim de semana</option>
+        <option value="1">Irei neste fim de semana</option>
+    </select><br>
+    <label for="select_frequentador_b">Frequentador B: </label>
+    <select id="select_frequentador_b">
+        <option value="0">Não irei neste fim de semana</option>
+        <option value="1">Irei neste fim de semana</option>
+    </select><br>
+    <button onclick="checar()">Checar aglomeração</button>
+    
+</body>
+</html>
+
+<script>
+
+    function checar() {
+        var frequentadorA = Number(select_frequentador_a.value);
+        var frequentadorB = Number(select_frequentador_b.value);
+
+        if (frequentadorA == 0 && frequentadorB == 0) {
+            alert("Risco 0 de aglomeração, perfeito :)");
+        }
+        else if (frequentadorA == 1 && frequentadorB == 1) {
+            alert("Risco ALTO de aglomeração, 100% de ocupação");
+        }
+        else {
+            alert("Há risco de aglomeração, 50% das pessoas estarão no parque");
+        }
+    }
+    //Esta é uma porta NOR ou NÃO OU
+
+</script>
